@@ -5,7 +5,6 @@
 # Niech funkcja drukuje argumenty kluczowe w formie listy:
 # nazwa (klucz) -> wartość
 
-
 # MAIN SOLUTION
 def print_everything(*args, **kwargs):
     '''
