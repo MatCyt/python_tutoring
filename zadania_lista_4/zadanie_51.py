@@ -24,15 +24,20 @@ def oblicz_trójmian(delta, a, b):
     if delta > 0:
         x1 = (-b - math.sqrt(delta) / 2 * a)
         x2 = (-b - math.sqrt(delta) / 2 * a)
-        return("Dwa rozwiazania: x1 = {}, x2 = {}".format(x1, x2))
+        return x1, x2
     elif delta == 0:
         x = -b / 2 * a
-        return("Jedno rozwiazanie: x = {}".format(x))
+        return x
     else:
-        return("rownanie kwadratowe nie posiada rozwiazan w zbiorze liczb rzeczywistych dla delta < 0") 
-    
-
+        return None
 
 delta = oblicz_delte(a, b, c)
 
-print(oblicz_trójmian(delta, a, b))
+trojmian = oblicz_trójmian(delta, a, b)
+
+if isinstance(trojmian, tuple):
+    print("Dwa rozwiazania: x1 = {}, x2 = {}".format(trojmian[0], trojmian[1]))
+elif isinstance(trojmian, float):
+    print("Jedno rozwiazanie: x = {}".format(trojmian))
+else:
+    print("rownanie kwadratowe nie posiada rozwiazan w zbiorze liczb rzeczywistych dla delta < 0")

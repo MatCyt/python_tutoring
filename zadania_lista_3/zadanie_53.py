@@ -6,7 +6,8 @@ length = 150
 # 5.3 zmodyfikuj go tak, aby narysował wielokąt foremny, którego liczba boków podana jest przez użytkownika
 n_sides = eval(input('Podaj ilość boków: ')) # ilosc boków
 
-angle = 180 - (((n_sides-2) * 180) / n_sides)
+# angle = 180 - (((n_sides-2) * 180) / n_sides)
+angle = 360 / n_sides
 
 turtle.speed(20) # ustal predkosc zolwia
 

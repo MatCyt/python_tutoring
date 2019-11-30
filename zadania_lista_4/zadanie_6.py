@@ -1,4 +1,3 @@
-# Napisz funkcję, która przyjmuje dowolną liczbę argumentów pozycyjnych oraz kluczowych.
 
 # Napisz funkcję, która przyjmuje dowolną liczbę argumentów pozycyjnych oraz kluczowych.
 # 1 -> wartość pierwszego argumentu
@@ -9,10 +8,16 @@
 
 # MAIN SOLUTION
 def print_everything(*args, **kwargs):
+    '''
+
+    :param args:
+    :param kwargs:
+    :return:
+    '''
 
     # for args
-    for position, arg in enumerate(list(args)):
-        print("{} -> {}".format(position, arg))
+    for position, arg in enumerate(args):
+        print("{} -> {}".format(position + 1, arg))
 
     # for kwargs
     for key, value in kwargs.items():
