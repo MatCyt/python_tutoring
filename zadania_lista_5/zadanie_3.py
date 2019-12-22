@@ -12,5 +12,7 @@ def problem_collatza(c0, n):
 
     return ciag, ciag[-1]
 
-problem_collatza(11, 15)[0]
-problem_collatza(11, 15)[1]
+ciag, ciag1 = problem_collatza(11, 20)
+
+print(ciag)
+print(ciag1)

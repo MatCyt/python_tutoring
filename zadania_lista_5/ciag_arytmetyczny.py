@@ -10,6 +10,8 @@ def ciag_arytmetyczny(a1, r, n):
 
     '''
     an = a1 + (n - 1) * r
-    an_sum = sum(list(range(a1, n, r)))
+    an_sum = sum(list(range(a1, an + r, r)))
+    print(list(range(a1, an + r, r)))
     return an, an_sum
+
 

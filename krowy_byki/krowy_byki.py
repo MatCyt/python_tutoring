@@ -1,3 +1,10 @@
+# TODO main
+
+# 1235
+# 5558
+# 5555
+
+
 # KROWY I BYKI
 import random
 
@@ -20,6 +27,11 @@ def get_input():
     else:
         break
     
+# FUNKCJA:  Wylicz krowy
+
+
+# FUNKCJA: Wylicz byki
+
 
 # FUNKCJA | Input od użytkownika i jego walidacja (czy jest liczbą)
 
