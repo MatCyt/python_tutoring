@@ -1,1 +1,0 @@
-pozostala1, pozostala2, najwieksza = max(1,2,3))

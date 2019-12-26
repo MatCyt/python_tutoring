@@ -15,11 +15,8 @@ def get_input():
         player_guess = input('Make your guess: ')
         if len(player_guess) != 4:
             print('This is not a correct value. 4 digits only')
-            continue
-            
         else:
             return list(player_guess)
-            break
 
 def count_cows(random_number, player_guess):
     ''' match random rumber with player guess, counts numbers matched both for value and index position
@@ -48,7 +45,7 @@ def count_bulls(random_left, guess_left):
 
 if __name__ == "__main__":
     random_number = get_random()
-    trials = 0
+    trials = 1
     while True:
         player_guess = get_input()
         if player_guess != random_number:
@@ -58,4 +55,5 @@ if __name__ == "__main__":
             print('Krowy: {}, Byki: {}'.format(n_cows, n_bulls))
         else:
             print('You won! Number of trials: {}'.format(trials))
+            break
 

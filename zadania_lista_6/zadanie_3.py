@@ -14,14 +14,14 @@ from math import acos, degrees, sqrt
 
 def sprawdzenie_argumentow(boki):
     if len(boki) != 3:
-        sys.exit('Zła liczba argumentów')
+        return False
+    return True
 
 
-def sprawdzenie_bokow(boki):
-    for i in boki:
-        pozostale = [x for x in boki if x != i]
-        if sum(pozostale) <= i:
-            sys.exit('Zła długość boków')
+def sprawdzenie_bokow(a, b, c):
+    if a + b <= c or a + c <= b or b + c <= a:
+        return False
+    return True
 
 
 def oblicz_obwod_trojkata(a, b, c):
@@ -65,9 +65,9 @@ def wylicz_katy(a, b, c):
     cos_c = (a*a + b*b - c*c) / (2*a*b)
     cos_a = (b*b + c*c - a*a) / (2*b*c)
     cos_b = (c*c + a*a - b*b) / (2*c*a)
-    kat_a = round(degrees(acos(cos_a)), 0)
-    kat_b = round(degrees(acos(cos_b)), 0)
-    kat_c = round(degrees(acos(cos_c)), 0)
+    kat_a = round(degrees(acos(cos_a)))
+    kat_b = round(degrees(acos(cos_b)))
+    kat_c = round(degrees(acos(cos_c)))
     return kat_a, kat_b, kat_c
 
 
@@ -89,11 +89,13 @@ if __name__ == "__main__":
 
     boki_trojkata = sys.argv[1:]
     boki_trojkata = list(map(int, boki_trojkata))
-
-    sprawdzenie_argumentow(boki_trojkata)
-    sprawdzenie_bokow(boki_trojkata)
-
     a, b, c = boki_trojkata
+
+    if sprawdzenie_argumentow(boki_trojkata) == False:
+        sys.exit('Zła liczba argumentów')
+    if not sprawdzenie_bokow(*boki_trojkata):
+    # if not sprawdzenie_bokow(boki_trojkata[0], boki_trojkata[1], boki_trojkata[2])
+        sys.exit('Niewłaściwa długość boków')
 
     print(oblicz_obwod_trojkata(a, b, c))
     print(oblicz_pole_trojkata(a, b, c))
