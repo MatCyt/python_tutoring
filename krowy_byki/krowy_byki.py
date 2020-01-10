@@ -2,7 +2,6 @@
 # COWS AND BULLS
 import random
 
-
 def get_random():
     ''' draw random four digit number '''
     random_number = random.randint(1000, 9999)
