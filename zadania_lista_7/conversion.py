@@ -10,18 +10,26 @@ def fahrenheit_to_celcius(f_degrees):
 
 def generate_random_celcius(n):
     ''' generate random int n times in range -273 to 200'''
-    celcius_degrees = [randint(-273, 200) for i in range(1, n+1)]
+    celcius_degrees = [randint(-273, 200) for i in range(0, n)]
     return celcius_degrees
 
-def save_to_file(int_format, file_name):
-    str_format = list(map(str, int_format))
+def save_to_file(file_content, file_name, file_extension = 'txt'):
+    ''' save degrees to file, converting them to string
+
+    parameters:
+    file_content : iterable object
+    file_name : end name of the txt file
+
+    '''
+
+    str_format = list(map(str, file_content))
     file_format = ','.join(str_format)
-    full_file_name = file_name + '.txt'
+    full_file_name = '{}.{}'.format(file_name, file_extension)
     with open(full_file_name, "w") as f:
         f.write(file_format)
 
-def convert_to_number(file_format):
-    str_format = file_format.split(',')
-    int_format = list(map(float, str_format))
-    return int_format
+def convert_to_number(file_content):
+    content_splitted = file_content.split(',')
+    float_list = list(map(float, content_splitted))
+    return float_list
 

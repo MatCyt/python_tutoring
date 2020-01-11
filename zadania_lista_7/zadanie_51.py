@@ -18,10 +18,12 @@ lines = full_text.split('\n')
 
 if args.m == 1:
     for i in lines:
+        # if not i.startswith('#'):
         if i[0] != '#':
             print(i)
 elif args.m == 2:
     for i, l in enumerate(lines):
+        # print('{}. {}'.format(i, l))
         print(str(i) + '. ', l)
 else:
     print(full_text)
