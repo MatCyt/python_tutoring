@@ -19,6 +19,8 @@ studenci_python_u = np.unique(studenci_python)
 studenci_cpp_u = np.unique(studenci_cpp)
 shared_unique = [name for name in studenci_python_u if name in studenci_cpp_u]
 
+# rozwiązanie z teorii 9
+studenci_python.intersection(studenci_cpp)
 
 # Internet found solution
 internet_solution = set(studenci_python) & set(studenci_cpp)
