@@ -12,8 +12,8 @@ def stworz_ciag_gen(n):
     return ciag
 
 
-ciag_list = stworz_ciag_list(5)
-ciag_gen = stworz_ciag_gen(5)
+ciag_list = stworz_ciag_list(100000)
+ciag_gen = stworz_ciag_gen(100000)
 
 print(sys.getsizeof(ciag_list))
 print(sys.getsizeof(ciag_gen))

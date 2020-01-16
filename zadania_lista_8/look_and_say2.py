@@ -2,6 +2,7 @@ import numpy as np
 import argparse
 
 
+
 def split_to_unique(converted_numbers):
     ''' split list of strings to lists of unique values grouped together'''
     result = [[]]
