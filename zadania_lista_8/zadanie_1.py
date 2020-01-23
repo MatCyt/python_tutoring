@@ -21,5 +21,6 @@ if __name__ == '__main__':
 
     ciag = stworz_ciag(args.n)
 
-    zapisz_do_pliku(ciag)
+    # zapisz_do_pliku(ciag)
+    print(ciag)
 

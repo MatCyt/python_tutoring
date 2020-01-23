@@ -19,6 +19,12 @@ studenci_python_u = np.unique(studenci_python)
 studenci_cpp_u = np.unique(studenci_cpp)
 shared_unique = [name for name in studenci_python_u if name in studenci_cpp_u]
 
+# by hand
+shared_students = []
+for student in studenci_python:
+    if student in studenci_cpp and student not in shared_students:
+        shared_students.append(student)
+
 # rozwiązanie z teorii 9
 studenci_python.intersection(studenci_cpp)
 
