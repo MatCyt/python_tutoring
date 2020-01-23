@@ -1,12 +1,11 @@
 class Samochod:
 
-    # czy trzeba je tu wszystkie wypisywać? kiedy tak? one sa obowiazkowe? jak mozna podac nie obowiazkowe?
-    def __init__(self, max_predkosc, spalanie, obecna_predkosc = 0, pokonany_dystans = 0, czas_podrozy = 0):
+    def __init__(self, max_predkosc, spalanie):
         self.max_predkosc = max_predkosc
         self.spalanie = spalanie
-        self.obecna_predkosc = obecna_predkosc
-        self.pokonany_dystans = pokonany_dystans
-        self.czas_podrozy = czas_podrozy
+        self.obecna_predkosc = 0
+        self.pokonany_dystans = 0
+        self.czas_podrozy = 0
 
     def przyspiesz(self, wieksza_predkosc):
         self.obecna_predkosc += wieksza_predkosc
