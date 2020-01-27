@@ -1,3 +1,3 @@
 # python_tutoring
 
-practice and projects.
+practice and projects
