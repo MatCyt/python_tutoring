@@ -8,6 +8,7 @@
 import argparse
 import os
 
+
 # initiate argparse
 my_parser = argparse.ArgumentParser(description='plik oraz wartość tekstowa')
 
